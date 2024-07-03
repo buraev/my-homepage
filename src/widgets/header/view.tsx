@@ -33,7 +33,11 @@ export const Header = () => {
             >
               Works
             </NavLink>
-            <NavLink className="hover:underline" href="/posts">
+            <NavLink
+              activeClassName="underline"
+              className="hover:underline"
+              href="/posts"
+            >
               Posts
             </NavLink>
             <NavLink className="hover:underline" href="/devices">

@@ -14,7 +14,8 @@
     "next": "14.2.4",
     "qs": "^6.12.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "three": "^0.166.1"
   },
   "devDependencies": {
     "@neodx/svg": "^0.7.1",
@@ -23,6 +24,7 @@
     "@types/qs": "^6.9.15",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/three": "^0.166.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "autoprefixer": "^10.4.19",
     "class-variance-authority": "^0.7.0",

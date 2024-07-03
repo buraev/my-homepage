@@ -13,7 +13,7 @@ import { Container } from "@/shared/ui/container"
 export const Home: NextPage = () => {
   return (
     <Container className="grid max-w-prose grid-cols-1 gap-6">
-      <div className="relative flex overflow-x-hidden rounded-lg bg-white/10 p-3 text-gray-50 backdrop-blur-sm">
+      <div className="backdrop-blur-smborder-stone-950 relative flex overflow-x-hidden rounded-lg border border-stone-950 bg-white/10 p-3 text-gray-50">
         <div className="flex animate-marquee gap-2 whitespace-nowrap">
           <span>Hello, I&apos;m frontend developer based in Moscow</span>
           <span>Hello, I&apos;m frontend developer based in Moscow</span>
@@ -37,7 +37,7 @@ export const Home: NextPage = () => {
           <p className="text-4xl text-gray-50">Vasilii Buraev</p>
           <p className="text-base text-gray-500">Digital Ninja</p>
         </div>
-        <div className="shrink-0 overflow-hidden rounded-full border-2 border-stone-950">
+        <div className="shrink-0 overflow-hidden rounded-full border border-stone-950">
           <Image alt="Profile image" height={96} src={profilePic} width={96} />
         </div>
       </div>

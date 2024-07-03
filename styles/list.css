@@ -1,0 +1,17 @@
+.counter-list ol {
+  counter-reset: item;
+}
+
+.counter-list li {
+  display: block;
+}
+
+.counter-list li::before {
+  content: counters(item, '.') ' ';
+  counter-increment: item;
+}
+
+.counter-list li:has(span)::before {
+  content: counters(item, '') '. ';
+  counter-increment: item;
+}

@@ -14,7 +14,7 @@ export const Home: NextPage = () => {
   return (
     <Container className="grid max-w-prose grid-cols-1 gap-6">
       <div className="relative flex overflow-x-hidden rounded-lg bg-white/10 p-3 text-gray-50 backdrop-blur-sm">
-        <div className="animate-marquee flex gap-2 whitespace-nowrap">
+        <div className="flex animate-marquee gap-2 whitespace-nowrap">
           <span>Hello, I&apos;m frontend developer based in Moscow</span>
           <span>Hello, I&apos;m frontend developer based in Moscow</span>
           <span>Hello, I&apos;m frontend developer based in Moscow</span>
@@ -24,7 +24,7 @@ export const Home: NextPage = () => {
           </span>
         </div>
 
-        <div className="animate-marquee2 absolute flex gap-2 whitespace-nowrap">
+        <div className="absolute flex animate-marquee2 gap-2 whitespace-nowrap">
           <span>Hello, I&apos;m frontend developer based in Moscow</span>
           <span>Hello, I&apos;m frontend developer based in Moscow</span>
           <span>Hello, I&apos;m frontend developer based in Moscow</span>

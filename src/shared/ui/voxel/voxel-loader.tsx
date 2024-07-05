@@ -24,8 +24,10 @@ export const Spinner = () => (
   </div>
 )
 
-export const Container = forwardRef(({ children }: any) => (
-  <div>{children}</div>
+export const Container = forwardRef(({ children }: any, ref: any) => (
+  <div ref={ref} className="relative m-auto -mb-24 -mt-20 h-96 w-96">
+    {children}
+  </div>
 ))
 
 const Loader = () => {

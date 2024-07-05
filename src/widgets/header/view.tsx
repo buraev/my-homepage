@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <header
       className={cx(
-        "shadow-card relative rounded-b-3xl py-4 backdrop-blur-xl lg:py-6",
+        "shadow-card relative z-50 rounded-b-3xl pt-4 backdrop-blur-sm lg:pt-6",
       )}
     >
       <Container

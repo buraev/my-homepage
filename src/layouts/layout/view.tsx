@@ -1,5 +1,7 @@
 import { type ReactNode } from "react"
 
+import { VoxelMain } from "../../shared/ui/voxel"
+
 import { cx } from "@/shared/utils"
 import { Header } from "@/widgets/header"
 
@@ -16,7 +18,8 @@ export const Layout = ({ children, className }: LayoutProps) => {
       {/* <Toaster /> */}
       <Header />
 
-      <main className="pb-15 xs:pb-20 lg:pb-30 yargrow pt-6 md:pt-10 lg:pt-12">
+      <main className="pb-15 xs:pb-20 lg:pb-30 yargrow">
+        <VoxelMain />
         {children}
       </main>
       {/* <ScrollToTopButton className="fixed bottom-40 right-4 z-50" /> */}

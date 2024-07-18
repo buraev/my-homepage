@@ -10,7 +10,12 @@
     "lint:fix": "eslint \"{src,pages,app,lib}/**/*.{js,mjs,cjs,ts,mts,jsx,tsx}\" --fix"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.51.9",
+    "@tanstack/react-query-devtools": "^5.51.9",
+    "axios": "^1.7.2",
     "framer-motion": "^11.2.12",
+    "js-cookie": "^3.0.5",
+    "jwt-decode": "^4.0.0",
     "next": "14.2.4",
     "qs": "^6.12.1",
     "react": "^18",
@@ -20,6 +25,7 @@
   "devDependencies": {
     "@neodx/svg": "^0.7.1",
     "@svgr/webpack": "^8.1.0",
+    "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/qs": "^6.9.15",
     "@types/react": "^18",

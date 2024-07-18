@@ -1,16 +1,32 @@
+import { dehydrate } from "@tanstack/react-query"
 import Image from "next/image"
 import Link from "next/link"
-import type { NextPage } from "next/types"
+import type { GetStaticProps, NextPage } from "next/types"
 
 import freeCodeCumpPic from "../../../public/freeCode.png"
 import profilePic from "../../../public/profile-img.jpg"
 import wuShiPic from "../../../public/wuShi.png"
+import { prefetchNews, useNews } from "../../entities/news"
+import { createQueryClient } from "../../shared/api"
 import { Icon, NavLink, NewsCard } from "../../shared/ui"
 import { Button } from "../../shared/ui/button"
 
 import { Container } from "@/shared/ui/container"
 
+export const homeStatic: GetStaticProps = async () => {
+  const queryClient = createQueryClient()
+
+  await Promise.all([await prefetchNews(queryClient, {})])
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  }
+}
+
 export const Home: NextPage = () => {
+  const { data } = useNews()
   return (
     <Container className="grid max-w-prose grid-cols-1 gap-6">
       <div className="backdrop-blur-smborder-stone-950 relative flex overflow-x-hidden rounded-lg border border-stone-950 bg-white/10 p-3 text-gray-50">

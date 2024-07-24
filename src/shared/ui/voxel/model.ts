@@ -6,8 +6,8 @@ draco.setDecoderConfig({ type: "js" })
 draco.setDecoderPath("https://www.gstatic.com/draco/v1/decoders/")
 
 export function loadGLTFModel(
-  scene,
-  glbPath,
+  scene: any,
+  glbPath: any,
   options = { receiveShadow: true, castShadow: true },
 ) {
   const { receiveShadow, castShadow } = options
@@ -26,7 +26,7 @@ export function loadGLTFModel(
         obj.castShadow = castShadow
         scene.add(obj)
 
-        obj.traverse(function (child) {
+        obj.traverse(function (child: any) {
           if (child.isMesh) {
             child.castShadow = castShadow
             child.receiveShadow = receiveShadow

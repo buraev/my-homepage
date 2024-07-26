@@ -61,7 +61,7 @@ export const variants = cva(
       },
       color: {
         green: [
-          "border-green hover:border-green-hover active:border-green-active bg-green hover:bg-green-hover data-primary:text-white active:bg-green-active ",
+          "border-secondaryMain hover:border-secondaryLight active:border-secondaryLight hover:bg-secondaryLight hover:text-secondaryLight active:bg-green-active ",
           "data-ghost:text-green data-ghost:hover:text-green-hover data-ghost:active:text-green-active",
         ],
 

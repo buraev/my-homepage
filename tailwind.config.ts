@@ -1,11 +1,17 @@
 import type { Config } from "tailwindcss"
 
 const config: Config = {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@esia-frontend/ui-kit/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    colors: {
+      primaryMain: "oklch(0% 0 84.58)",
+      primaryLight: "oklch(36.16% 0.008 75.31)",
+      secondaryMain: "oklch(82.58% 0.018 81.32)",
+      secondaryLight: "oklch(99.06% 0.01352908677048263 92.97793627734326)",
+      error: "oklch(65.65% 0.23 39.43)",
+
+      // ...
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

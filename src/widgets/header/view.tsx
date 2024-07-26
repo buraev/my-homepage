@@ -17,7 +17,7 @@ export const Header = () => {
         )}
       >
         <nav className="xs:justify-between flex items-center justify-center gap-8 sm:self-center lg:col-span-2">
-          <div className="flex gap-2 whitespace-nowrap text-gray-50">
+          <div className="flex gap-2 whitespace-nowrap">
             <Link href="./">
               <p>Vasilii Buraev</p>
             </Link>
@@ -25,7 +25,7 @@ export const Header = () => {
             <span className="bg-green h-[18px] w-[1.5px] shrink-0 self-center" />
           </div>
 
-          <div className="leading-tighter hidden shrink-0 items-center gap-8 text-base text-gray-50 lg:flex">
+          <div className="leading-tighter hidden shrink-0 items-center gap-8 text-base lg:flex">
             <NavLink
               activeClassName="underline"
               className="hover:underline"

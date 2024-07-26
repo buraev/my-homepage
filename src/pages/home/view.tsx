@@ -29,7 +29,7 @@ export const Home: NextPage = () => {
   const { data } = useNews()
   return (
     <Container className="grid max-w-prose grid-cols-1 gap-6">
-      <div className="backdrop-blur-smborder-stone-950 relative flex overflow-x-hidden rounded-lg border border-stone-950 bg-white/10 p-3 text-gray-50">
+      <div className="border-secondaryMain relative flex overflow-x-hidden rounded-lg border p-3">
         <div className="flex animate-marquee gap-2 whitespace-nowrap">
           <span>Hello, I&apos;m frontend developer based in Moscow</span>
           <span>Hello, I&apos;m frontend developer based in Moscow</span>
@@ -50,15 +50,15 @@ export const Home: NextPage = () => {
       </div>
       <div className="flex">
         <div className="grow">
-          <p className="text-4xl text-gray-50">Vasilii Buraev</p>
-          <p className="text-base text-gray-500">Digital Ninja</p>
+          <p className="text-secondaryLight text-4xl">Vasilii Buraev</p>
+          <p className="text-error text-gray-500">Digital Ninja</p>
         </div>
-        <div className="shrink-0 overflow-hidden rounded-full border border-stone-950">
+        <div className="shrink-0 overflow-hidden rounded-full border">
           <Image alt="Profile image" height={96} src={profilePic} width={96} />
         </div>
       </div>
       <div className="flex flex-col">
-        <p className="py-2 text-xl text-gray-50">Work</p>
+        <p className="text-secondaryLight py-2 text-xl">Work</p>
         <p className="text-base text-gray-500">
           I&apos;m self-taught programmer from Russia. <br />
           One day I decided to switch career from being bartender. <br />
@@ -71,7 +71,7 @@ export const Home: NextPage = () => {
         </p>
         <div className="flex">
           <Link passHref href="https://reactjs.org/">
-            <p className="text-blue-600 underline">React</p>
+            <p className="text-secondaryLight underline">React</p>
           </Link>
           <p className="text-gray-500">
             - thats the technology I know best and work daily with.
@@ -83,7 +83,7 @@ export const Home: NextPage = () => {
             href={"./works"}
           >
             <Button
-              className="w-full border-stone-950 bg-white/10 text-gray-50 hover:bg-white/20 md:w-fit"
+              className="hover:bg-secondaryLight/20 w-full md:w-fit"
               size="sm"
             >
               <span className="line-clamp-3 w-full">My portfolio</span>
@@ -93,7 +93,7 @@ export const Home: NextPage = () => {
         </div>
       </div>
       <div className="flex flex-col">
-        <p className="py-2 text-xl text-gray-50">Bio</p>
+        <p className="text-secondaryLight py-2 text-xl">Bio</p>
         <div className="flex gap-3">
           <p className="text-gray-50">1995</p>
           <p className="text-gray-500">Born in Balakovo, Russia</p>
@@ -105,7 +105,7 @@ export const Home: NextPage = () => {
               Graduated from the Physics and Mathematics Lyceum in
             </p>
             <Link passHref href="https://reactjs.org/">
-              <p className="text-blue-600 underline">Semenov</p>
+              <p className="text-secondaryLight underline">Semenov</p>
             </Link>
           </div>
         </div>
@@ -119,13 +119,13 @@ export const Home: NextPage = () => {
         </div>
       </div>
       <div className="flex flex-col">
-        <p className="py-2 text-xl text-gray-50">My interests</p>
+        <p className="text-secondaryLight py-2 text-xl">My interests</p>
         <p className="text-gray-500">
           Art, Bartending, Industrial Design, Neurobiology, Machine Learning
         </p>
       </div>
       <div className="flex flex-col">
-        <p className="py-2 text-xl text-gray-50">On the web</p>
+        <p className="text-secondaryLight py-2 text-xl">On the web</p>
         <p className="text-gray-500">@Prince-Gizard</p>
         <p className="text-gray-500">@buraev_v</p>
       </div>

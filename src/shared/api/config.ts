@@ -92,10 +92,10 @@ const errInterceptor = async (res: AxiosResponse) => {
   return res
 }
 
-api.interceptors.response.use(errInterceptor)
+// api.interceptors.response.use(errInterceptor)
 
-withTokenApi.interceptors.request.use(authInterceptor)
-withTokenApi.interceptors.response.use(errInterceptor)
+// withTokenApi.interceptors.request.use(authInterceptor)
+// withTokenApi.interceptors.response.use(errInterceptor)
 
 export const createQueryClient = () => {
   return new QueryClient({

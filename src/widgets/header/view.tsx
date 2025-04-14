@@ -22,7 +22,7 @@ export const Header = () => {
               <p>Vasilii Buraev</p>
             </Link>
 
-            <span className="bg-green h-[18px] w-[1.5px] shrink-0 self-center" />
+            <span className="h-[18px] w-[1.5px] shrink-0 self-center" />
           </div>
 
           <div className="leading-tighter hidden shrink-0 items-center gap-8 text-base lg:flex">

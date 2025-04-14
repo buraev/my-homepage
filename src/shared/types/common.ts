@@ -4,48 +4,48 @@ import type {
   FieldValues,
   UseFormRegister,
   UseFormSetValue,
-} from 'react-hook-form';
+} from "react-hook-form"
 
 export type List<T> = {
-  data: T[];
-  pagination: Pagination;
-};
+  data: T[]
+  pagination: Pagination
+}
 
 export type Pagination = {
-  total: number;
-  currentPage: number;
-  nextPage: number | null;
-};
+  total: number
+  currentPage: number
+  nextPage: number | null
+}
 
 export type IdTitle = {
-  title: string;
-  id: number;
-};
+  title: string
+  id: number
+}
 
 export type QueryObject = {
   [key: string]:
-    | string
+    | number[]
+    | QueryObject
     | string[]
     | number
-    | number[]
+    | string
     | null
     | undefined
-    | QueryObject;
-};
+}
 
 export type Document = {
-  id: number;
-  slug: string;
-  title: string;
-  dateCreate: string;
-  uuid: string;
-  type: IdTitle & { slug: string; icon: string };
-  extension?: string;
-};
+  id: number
+  slug: string
+  title: string
+  dateCreate: string
+  uuid: string
+  type: IdTitle & { slug: string; icon: string }
+  extension?: string
+}
 
 export interface FieldProps<T extends FieldValues> {
-  register: UseFormRegister<T>;
-  errors: FieldErrors<FieldValues>;
-  control?: Control<T>;
-  setValue?: UseFormSetValue<T>;
+  register: UseFormRegister<T>
+  errors: FieldErrors<FieldValues>
+  control?: Control<T>
+  setValue?: UseFormSetValue<T>
 }

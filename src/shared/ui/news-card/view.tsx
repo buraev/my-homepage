@@ -1,17 +1,17 @@
-import Image, { StaticImageData } from "next/image"
+import Image from "next/image"
+import { useRouter } from "next/navigation"
 
-import defaultPic from "../../../../public/footprint.png"
+import audioslave from "../../../../public/audioslave.webp"
 
 import { BLUR } from "./constants"
 
 import { Card, Icon } from "@/shared/ui"
 import { cx } from "@/shared/utils"
-
 interface NewsCardProps {
   className?: string
   href?: string
   title: string
-  src: StaticImageData | string
+  picSrc?: any
   discription: string
 }
 /**
@@ -32,10 +32,11 @@ export const NewsCard = ({
   className,
   href,
   title,
-  src,
+  picSrc,
   discription,
   ...props
 }: NewsCardProps) => {
+  const router = useRouter()
   return (
     <Card
       href={href}
@@ -53,13 +54,13 @@ export const NewsCard = ({
           placeholder="blur"
           quality={60}
           sizes="(100vw - 32px) 165px, 280px"
-          src={src === "" ? defaultPic : src}
+          src={picSrc ? picSrc : audioslave}
         />
       </div>
 
       <article className="flex grow flex-col justify-between px-4 py-5 font-semibold">
         <div className="flex flex-col gap-2">
-          <span className="leading-4.5 text-xs uppercase text-stone-200">
+          <span className="text-xs leading-4.5 text-stone-200 uppercase">
             {title}
           </span>
           <h5 className="line-clamp-2 text-base text-stone-500">
@@ -69,7 +70,7 @@ export const NewsCard = ({
 
         <div className="mt-4 flex items-center gap-1 font-normal text-gray-400">
           <Icon className="h-5 w-5" name="common/calendar" />
-          <p className="leading-4.5 text-sm">20.20.21</p>
+          <p className="text-sm leading-4.5">20.20.21</p>
         </div>
       </article>
     </Card>

@@ -37,7 +37,7 @@ export const Container = forwardRef<HTMLDivElement, ContainerProps>(
       <Component
         ref={ref}
         {...props}
-        className={cx("mx-auto w-full px-4 md:px-5 xl:px-[50px]", className)}
+        className={cx("mx-auto w-full", className)}
       />
     )
   },

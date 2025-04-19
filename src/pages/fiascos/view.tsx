@@ -29,49 +29,15 @@ export const Fiascos: NextPageWithLayout = () => {
   const handleSetPersonId = (id: string) => {
     setCurrentPersonId(id)
   }
-  console.log(persons)
   return (
     <div className="mx-auto flex w-full max-w-prose flex-col gap-6">
-      <p className="text-gray-50 text-2xl">Fiasco</p>
+      <p className="text-2xl text-gray-50">Fiasco</p>
       <Container className="flex flex-1 flex-col gap-2">
         <span className="flex justify-center self-center">
           This is fiasco, my dude
         </span>
         <div className="flex flex-1 gap-1 rounded-lg p-3">
-          <div className="flex flex-1 flex-col gap-2 rounded-lg border-b border-l border-t border-dashed border-secondaryMain p-3">
-            {persons &&
-              persons?.rows?.map(person => {
-                return (
-                  <div
-                    key={person.id}
-                    className="flex justify-between"
-                    onClick={() => handleSetPersonId(person.id)}
-                  >
-                    <span
-                      className={
-                        person.id === currentPersonId
-                          ? "cursor-pointer underline decoration-dotted underline-offset-4"
-                          : "cursor-pointer no-underline hover:underline"
-                      }
-                    >
-                      {person.name}
-                    </span>
-                    {person.id === currentPersonId && <span>-&gt;</span>}
-                  </div>
-                )
-              })}
-          </div>
-          <div className="flex flex-1 flex-col gap-2 rounded-lg border-b border-r border-t border-dashed border-secondaryMain p-3">
-            {fiascos &&
-              fiascos?.rows
-                ?.filter(fiasco => fiasco.person === currentPersonId)
-                .map(person => {
-                  return (
-                    <div key={person.id}>
-                      <span>{person.name}</span>
-                    </div>
-                  )
-                })}
+          <div className="border-secondaryMain flex flex-1 flex-col gap-2 rounded-lg border-t border-r border-b border-dashed p-3">
             {!currentPersonId && (
               <div className="flex justify-between">
                 <span>&lt;-</span>

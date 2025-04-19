@@ -1,1 +1,1 @@
-export { Devices } from "./view.tsx"
+export { Devices } from "./view"

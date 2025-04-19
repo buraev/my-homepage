@@ -1,5 +1,5 @@
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js"
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+import GLTFLoader from "three-gltf-loader"
 
 const draco = new DRACOLoader()
 draco.setDecoderConfig({ type: "js" })

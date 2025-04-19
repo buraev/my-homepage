@@ -5,7 +5,7 @@ export const Spinner = () => (
     <div role="status">
       <svg
         aria-hidden="true"
-        className="fill-blue-600 text-gray-200 dark:text-gray-600 inline h-8 w-8 animate-spin"
+        className="inline h-8 w-8 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
         fill="none"
         viewBox="0 0 100 101"
         xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ export const Spinner = () => (
 )
 
 export const Container = forwardRef(({ children }: any, ref: any) => (
-  <div ref={ref} className="relative m-auto -mb-24 -mt-20 h-96 w-96">
+  <div ref={ref} className="relative m-auto -mt-20 -mb-24 h-96 w-96">
     {children}
   </div>
 ))

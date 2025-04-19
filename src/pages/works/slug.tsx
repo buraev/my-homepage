@@ -8,7 +8,7 @@ export const Work: NextPageWithLayout = () => {
   const { query } = useRouter()
   return (
     <div className="mx-auto flex w-full max-w-prose flex-col gap-6">
-      <p className="text-gray-50 text-2xl">Work</p>
+      <p className="text-2xl text-gray-50">Work</p>
       <Container>work</Container>
     </div>
   )

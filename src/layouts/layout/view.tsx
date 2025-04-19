@@ -18,7 +18,7 @@ export const Layout = ({ children, className }: LayoutProps) => {
       {/* <Toaster /> */}
       <Header />
 
-      <main className="pb-15 xs:pb-20 lg:pb-30 yargrow">
+      <main className="xs:pb-20 yargrow pb-15 lg:pb-30">
         <VoxelMain />
         {children}
       </main>

@@ -7,11 +7,11 @@
 }
 
 .counter-list li::before {
-  content: counters(item, '.') ' ';
+  content: counters(item, ".") " ";
   counter-increment: item;
 }
 
 .counter-list li:has(span)::before {
-  content: counters(item, '') '. ';
+  content: counters(item, "") ". ";
   counter-increment: item;
 }

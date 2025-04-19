@@ -1,32 +1,32 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 import * as THREE from "three"
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js"
 
 import { loadGLTFModel } from "./model"
 import { Container, Spinner } from "./voxel-loader"
 
-function easeOutCirc(x) {
+function easeOutCirc(x: any) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
 }
 
 export const VoxelMain = () => {
-  const refContainer = useRef()
+  const refContainer = useRef(null)
   const [loading, setLoading] = useState(true)
-  const refRenderer = useRef()
+  const refRenderer = useRef(null)
 
   const handleWindowResize = useCallback(() => {
-    const { current: renderer } = refRenderer
-    const { current: container } = refContainer
+    const { current: renderer } = refRenderer as any
+    const { current: container } = refContainer as any
     if (container && renderer) {
-      const scW = container.clientWidth
-      const scH = container.clientHeight
+      const scW = container?.clientWidth
+      const scH = container?.clientHeight
 
-      renderer.setSize(scW, scH)
+      renderer?.setSize(scW, scH)
     }
   }, [])
 
   useEffect(() => {
-    const { current: container } = refContainer
+    const { current: container } = refContainer as any
     if (container) {
       const scW = container.clientWidth
       const scH = container.clientHeight
@@ -34,10 +34,10 @@ export const VoxelMain = () => {
       const renderer = new THREE.WebGLRenderer({
         antialias: true,
         alpha: true,
-      })
+      }) as any
       renderer.setPixelRatio(window.devicePixelRatio)
       renderer.setSize(scW, scH)
-      renderer.outputEncoding = THREE.sRGBEncoding
+      renderer.outputEncoding = THREE.SRGBToLinear
       container.appendChild(renderer.domElement)
       refRenderer.current = renderer
       const scene = new THREE.Scene()
@@ -78,7 +78,7 @@ export const VoxelMain = () => {
         setLoading(false)
       })
 
-      let req = null
+      let req = null as any
       let frame = 0
       const animate = () => {
         req = requestAnimationFrame(animate)

@@ -3,6 +3,7 @@
 [https://vasilii-buraev.vercel.app/](https://vasilii-buraev.vercel.app)
 
 ## Showcase
+
 Visit my website:
 [![website screenshot](./public/images/works/cuteWebsite.png)](https://vasilii-buraev.vercel.app/)
 
@@ -23,12 +24,6 @@ $PROJECT_ROOT
 ├── components
 │   # Non-react modules
 ├── lib
-│   # Static files for images 
+│   # Static files for images
 └── public
 ```
-
-
-
-
-
-

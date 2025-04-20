@@ -52,7 +52,7 @@ export interface ButtonProps
  * Конфирунация базового набора цветов
  */
 export const variants = cva(
-  "transition duration-300 ease-in-out flex justify-center items-center select-none font-semibold border disabled:!outline-none ",
+  "hover:transition hover:duration-150 hover:delay-50 hover:ease-in-out flex justify-center items-center font-semibold border disabled:!outline-none hover:cursor-pointer hover:-translate-y-0.5 hover:scale-100 bg-[#d42a02] shadow-[rgba(0,0,0,0.377)_10px_10px_8px,#fb702c_2px_2px_10px_0px_inset,#d42a02_-4px_-4px_1px_0px_inset] transition-[0.1s] duration-[ease-in-out] active:translate-y-[2px] active:shadow-[rgba(0,0,0,0.377)_0px_0px_0px,inset_0.5px_0.5px_4px_#000000,#d42a02_-3.2px_-3.2px_8px_0px_inset]",
   {
     variants: {
       size: {

@@ -63,12 +63,12 @@ export const NewsCard = ({
           <span className="text-xs leading-4.5 text-stone-200 uppercase">
             {title}
           </span>
-          <h5 className="line-clamp-2 text-base text-stone-500">
+          <h5 className="line-clamp-2 text-base text-stone-300">
             {discription}
           </h5>
         </div>
 
-        <div className="mt-4 flex items-center gap-1 font-normal text-gray-400">
+        <div className="mt-4 flex items-center gap-1 font-normal text-stone-400">
           <Icon className="h-5 w-5" name="common/calendar" />
           <p className="text-sm leading-4.5">20.20.21</p>
         </div>

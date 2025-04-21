@@ -4,6 +4,9 @@ const svg = require("@neodx/svg/webpack")
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  env: {
+    customKey: "my-value",
+  },
   webpack: config => {
     config.module.rules = [
       ...config.module.rules,

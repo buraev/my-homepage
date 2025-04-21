@@ -3,6 +3,8 @@ import Link from "next/link"
 import { Container } from "../../shared/ui/container"
 import { NavLink } from "../../shared/ui/nav-link"
 import { cx } from "../../shared/utils"
+import Image from "next/image"
+import Y18 from "../../../public/y18.svg"
 
 export const Header = () => {
   return (
@@ -43,6 +45,16 @@ export const Header = () => {
             <NavLink className="hover:underline" href="/devices">
               Devices
             </NavLink>
+            <NavLink
+              className="flex justify-center gap-1 self-center hover:underline"
+              href="/news"
+            >
+              <span>News </span>
+              <span className="flex justify-center self-center">
+                <Y18 />
+              </span>
+            </NavLink>
+
             <NavLink className="hover:underline" href="/source">
               Source
             </NavLink>

@@ -1,7 +1,8 @@
 /* eslint-disable */
-import { NextPage } from "next"
 
-export const Devices: NextPage = () => {
+import { NextPageWithLayout } from "../../shared/types"
+
+export const Devices: NextPageWithLayout = () => {
   return (
     <div className="mx-auto mt-24 flex max-h-full min-h-screen w-full max-w-prose flex-1 flex-col">
       <div className="border-secondaryMain flex flex-col gap-4 rounded-lg border p-3">

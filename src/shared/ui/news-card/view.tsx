@@ -41,7 +41,7 @@ export const NewsCard = ({
     <Card
       href={href}
       className={cx(
-        "flex transform flex-col overflow-hidden rounded-2xl transition-transform duration-300 hover:scale-105",
+        "border-primarylight flex transform flex-col overflow-hidden rounded-2xl border border-solid transition-transform duration-300 hover:scale-102",
         className,
       )}
     >

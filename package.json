@@ -10,6 +10,7 @@
     "lint:fix": "eslint \"{src,pages,app,lib}/**/*.{js,mjs,cjs,ts,mts,jsx,tsx}\" --fix"
   },
   "dependencies": {
+    "@formkit/drag-and-drop": "^0.5.2",
     "@tailwindcss/postcss": "^4.1.3",
     "@tanstack/react-query": "^5.74.3",
     "@tanstack/react-query-devtools": "^5.74.3",

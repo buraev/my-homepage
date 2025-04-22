@@ -1,8 +1,18 @@
 /* eslint-disable */
 
 import { NextPageWithLayout } from "../../shared/types"
+import { useDragAndDrop } from "@formkit/drag-and-drop/react"
+import VimLogo from "public/Vimlogo.svg"
 
 export const Devices: NextPageWithLayout = () => {
+  const [parent, tapes] = useDragAndDrop<HTMLUListElement, string>([
+    "Depeche Mode",
+    "Duran Duran",
+    "Pet Shop Boys",
+    "Kraftwerk",
+    "Tears for Fears",
+    "Spandau Ballet",
+  ])
   return (
     <div className="mx-auto mt-24 flex max-h-full min-h-screen w-full max-w-prose flex-1 flex-col">
       <div className="border-secondaryMain flex flex-col gap-4 rounded-lg border p-3">
@@ -38,18 +48,18 @@ export const Devices: NextPageWithLayout = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center gap-2 self-center">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map(el => {
+          <ul className="flex justify-center gap-2 self-center" ref={parent}>
+            {tapes.map(el => {
               return (
-                <div
+                <li
                   key={el}
                   className="border-secondaryMain h-14 w-14 rounded-lg border border-dashed p-3"
                 >
                   {el}
-                </div>
+                </li>
               )
             })}
-          </div>
+          </ul>
         </div>
         <div className="flex flex-col gap-1">
           {[1, 2, 3, 4, 5].map(el => {

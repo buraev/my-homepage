@@ -13,7 +13,10 @@ type LayoutProps = {
 export const Layout = ({ children, className }: LayoutProps) => {
   return (
     <div
-      className={cx("relative flex min-h-screen flex-col font-sans", className)}
+      className={cx(
+        "relative m-auto flex min-h-screen flex-col font-sans",
+        className,
+      )}
     >
       {/* <Toaster /> */}
       <Header />

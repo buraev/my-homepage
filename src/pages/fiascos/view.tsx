@@ -29,6 +29,7 @@ export const Fiascos: NextPageWithLayout = () => {
   const handleSetPersonId = (id: string) => {
     setCurrentPersonId(id)
   }
+
   return (
     <div className="mx-auto flex w-full max-w-prose flex-col gap-6">
       <p className="text-2xl text-gray-50">Fiasco</p>

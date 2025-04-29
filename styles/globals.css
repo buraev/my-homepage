@@ -5,10 +5,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primarymain: oklch(0% 0 84.58);
-  --color-primarylight: oklch(36.16% 0.008 75.31);
-  --color-secondarymain: oklch(82.58% 0.018 81.32);
-  --color-secondarylight: oklch(99.06% 0.01352908677048263 92.97793627734326);
+  --color-primaryMain: oklch(26.06% 0.004 84.58);
+  --color-primaryLight: oklch(36.16% 0.008 75.31);
+  --color-secondaryMain: oklch(82.58% 0.018 81.32);
+  --color-secondaryLight: oklch(99.06% 0.01352908677048263 92.97793627734326);
   --color-textMain: oklch(0.93 0 7.81);
   --color-orange: oklch(0.56 0.2086 32.66);
   --color-error: oklch(65.65% 0.23 39.43);

@@ -3,7 +3,6 @@ import Link from "next/link"
 import type { NextPage } from "next/types"
 
 import profilePic from "../../../public/profile-img.jpg"
-import { useAuth } from "../../entities/auth"
 import { CreepingLineTextg } from "../../shared/consts/creepingLineText"
 import { Icon, NavLink, NewsCard } from "../../shared/ui"
 import { Button } from "../../shared/ui/button"
@@ -11,7 +10,6 @@ import { Button } from "../../shared/ui/button"
 import { Container } from "@/shared/ui/container"
 
 export const Home: NextPage = () => {
-  const { data } = useAuth()
   return (
     <Container className="grid max-w-prose grid-cols-1 gap-6">
       <div className="border-secondaryMain relative flex overflow-x-hidden rounded-lg border p-3">
@@ -40,7 +38,7 @@ export const Home: NextPage = () => {
         </div>
       </div>
       <div className="flex flex-col">
-        <p className="text-secondaryLight py-2 text-xl">Work</p>
+        <p className="text-secondaryMain py-2 text-xl">Work</p>
         <p className="text-textMain text-base">
           I&apos;m self-taught programmer from Russia. <br />
           One day I decided to switch career from being bartender. <br />
@@ -65,10 +63,7 @@ export const Home: NextPage = () => {
             className="flex items-center justify-center gap-1"
             href={"./works"}
           >
-            <Button
-              className="hover:bg-secondaryLight/20 w-full md:w-fit"
-              size="sm"
-            >
+            <Button className="hover:bg-orange/95 w-full md:w-fit" size="sm">
               <span className="text-[0.85em] tracking-[0.075em] text-[white] transition-[0.1s] duration-[ease-in-out]">
                 My portfolio
               </span>
@@ -81,7 +76,7 @@ export const Home: NextPage = () => {
         </div>
       </div>
       <div className="flex flex-col">
-        <p className="text-secondaryLight py-2 text-xl">Bio</p>
+        <p className="text-secondaryMain py-2 text-xl">Bio</p>
         <div className="flex gap-3">
           <p className="text-gray-100">1995</p>
           <p className="text-white">Born in Balakovo, Russia</p>
@@ -107,13 +102,13 @@ export const Home: NextPage = () => {
         </div>
       </div>
       <div className="flex flex-col">
-        <p className="text-secondaryLight py-2 text-xl">My interests</p>
+        <p className="text-secondaryMain py-2 text-xl">My interests</p>
         <p className="text-white">
           Art, Bartending, Industrial Design, Neurobiology, Machine Learning
         </p>
       </div>
       <div className="flex flex-col">
-        <p className="text-secondaryLight py-2 text-xl">On the web</p>
+        <p className="text-secondaryMain py-2 text-xl">On the web</p>
         <p className="text-white">@buraev</p>
         <p className="text-white">@buraev_v</p>
       </div>
